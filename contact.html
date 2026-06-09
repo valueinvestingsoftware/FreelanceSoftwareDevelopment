@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Project Consultation Request</title>
+
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: #0b1220;
+        color: #e5e7eb;
+        line-height: 1.6;
+    }
+
+    header {
+        padding: 80px 20px;
+        text-align: center;
+        background: linear-gradient(135deg, #0f172a, #111827);
+    }
+
+    header h1 {
+        font-size: 42px;
+        margin-bottom: 10px;
+    }
+
+    header p {
+        max-width: 750px;
+        margin: auto;
+        color: #94a3b8;
+        font-size: 18px;
+    }
+
+    .container {
+        width: 90%;
+        max-width: 1000px;
+        margin: auto;
+        padding: 60px 0;
+    }
+
+    h2 {
+        color: #60a5fa;
+        margin-bottom: 20px;
+    }
+
+    .card {
+        background: #111827;
+        border: 1px solid #1f2937;
+        border-radius: 12px;
+        padding: 25px;
+        margin-bottom: 20px;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 6px;
+        color: #cbd5e1;
+        font-weight: bold;
+    }
+
+    input, textarea, select {
+        width: 100%;
+        padding: 12px;
+        margin-bottom: 15px;
+        border-radius: 8px;
+        border: 1px solid #1f2937;
+        background: #0f172a;
+        color: white;
+        outline: none;
+    }
+
+    textarea {
+        min-height: 120px;
+        resize: vertical;
+    }
+
+    .btn {
+        display: inline-block;
+        width: 100%;
+        padding: 14px;
+        border-radius: 8px;
+        text-align: center;
+        font-weight: bold;
+        text-decoration: none;
+        background: #22c55e;
+        color: white;
+        border: none;
+        cursor: pointer;
+        font-size: 16px;
+    }
+
+    .btn:hover {
+        background: #16a34a;
+    }
+
+    .info {
+        background: #0f172a;
+        padding: 20px;
+        border-radius: 12px;
+        border: 1px solid #1f2937;
+        margin-bottom: 30px;
+    }
+
+    .email-box {
+        text-align: center;
+        margin-top: 30px;
+        padding: 25px;
+        background: #111827;
+        border-radius: 12px;
+        border: 1px solid #1f2937;
+    }
+
+    .email-box a {
+        color: #22c55e;
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+    footer {
+        text-align: center;
+        padding: 40px;
+        color: #64748b;
+        border-top: 1px solid #1f2937;
+        margin-top: 40px;
+    }
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>Request Your Software Project Consultation</h1>
+    <p>
+        Every serious project starts with clarity.
+        Tell us what you want to build and we will evaluate the best development approach.
+    </p>
+</header>
+
+<div class="container">
+
+    <!-- PROCESS -->
+    <div class="card">
+        <h2>How It Works</h2>
+        <div class="info">
+            1. You submit your project idea<br>
+            2. We analyze scope and complexity<br>
+            3. We respond with a clear development plan<br>
+            4. You proceed to development if approved
+        </div>
+    </div>
+
+    <!-- FORM -->
+    <div class="card">
+        <h2>Project Request Form</h2>
+
+        <form action="mailto:valueinvestingsoftware@gmail.com" method="post" enctype="text/plain">
+
+            <label>Your Name</label>
+            <input type="text" name="name" required>
+
+            <label>Your Email</label>
+            <input type="email" name="email" required>
+
+            <label>Project Type</label>
+            <select name="project_type" required>
+                <option>Web Application</option>
+                <option>Mobile App</option>
+                <option>Business System / ERP</option>
+                <option>API / Integration</option>
+                <option>Automation Tool</option>
+                <option>Custom Software</option>
+            </select>
+
+            <label>Project Description</label>
+            <textarea name="description" placeholder="Describe your idea, problem, or system..." required></textarea>
+
+            <label>Current Status (optional)</label>
+            <input type="text" name="status" placeholder="e.g. idea, prototype, existing system">
+
+            <button type="submit" class="btn">
+                Submit Consultation Request
+            </button>
+        </form>
+    </div>
+
+    <!-- VALUE INFO -->
+    <div class="card">
+        <h2>What Happens Next?</h2>
+        <div class="info">
+            ✔ We review your request manually<br>
+            ✔ We define technical feasibility<br>
+            ✔ We estimate development effort<br>
+            ✔ We respond via email with next steps
+        </div>
+    </div>
+
+    <!-- EMAIL -->
+    <div class="email-box">
+        <h2>Direct Contact</h2>
+        <p>If you prefer direct communication:</p>
+        <a href="mailto:valueinvestingsoftware@gmail.com">
+            valueinvestingsoftware@gmail.com
+        </a>
+    </div>
+
+</div>
+
+<footer>
+    Value Investing Software Development — Turning ideas into structured systems.
+</footer>
+
+</body>
+</html>
