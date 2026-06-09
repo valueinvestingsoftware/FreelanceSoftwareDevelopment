@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Project Consultation Request</title>
+<title>Contact - Project Consultation</title>
 
 <style>
     body {
@@ -11,118 +11,65 @@
         font-family: Arial, sans-serif;
         background: #0b1220;
         color: #e5e7eb;
-        line-height: 1.6;
     }
 
     header {
-        padding: 80px 20px;
+        padding: 60px 20px;
         text-align: center;
-        background: linear-gradient(135deg, #0f172a, #111827);
+        background: #111827;
     }
 
     header h1 {
-        font-size: 42px;
-        margin-bottom: 10px;
-    }
-
-    header p {
-        max-width: 750px;
-        margin: auto;
-        color: #94a3b8;
-        font-size: 18px;
+        font-size: 38px;
     }
 
     .container {
-        width: 90%;
-        max-width: 1000px;
+        max-width: 900px;
         margin: auto;
-        padding: 60px 0;
-    }
-
-    h2 {
-        color: #60a5fa;
-        margin-bottom: 20px;
+        padding: 40px 20px;
     }
 
     .card {
         background: #111827;
-        border: 1px solid #1f2937;
-        border-radius: 12px;
         padding: 25px;
-        margin-bottom: 20px;
+        border-radius: 12px;
+        border: 1px solid #1f2937;
     }
 
-    label {
-        display: block;
-        margin-bottom: 6px;
-        color: #cbd5e1;
-        font-weight: bold;
-    }
-
-    input, textarea, select {
+    input, select, textarea {
         width: 100%;
         padding: 12px;
+        margin-top: 10px;
         margin-bottom: 15px;
         border-radius: 8px;
         border: 1px solid #1f2937;
         background: #0f172a;
         color: white;
-        outline: none;
     }
 
-    textarea {
-        min-height: 120px;
-        resize: vertical;
-    }
-
-    .btn {
-        display: inline-block;
+    button {
         width: 100%;
         padding: 14px;
-        border-radius: 8px;
-        text-align: center;
-        font-weight: bold;
-        text-decoration: none;
         background: #22c55e;
-        color: white;
         border: none;
+        border-radius: 8px;
+        font-weight: bold;
+        color: white;
         cursor: pointer;
-        font-size: 16px;
     }
 
-    .btn:hover {
+    button:hover {
         background: #16a34a;
     }
 
-    .info {
+    .success {
+        display: none;
+        margin-top: 20px;
+        padding: 15px;
         background: #0f172a;
-        padding: 20px;
-        border-radius: 12px;
-        border: 1px solid #1f2937;
-        margin-bottom: 30px;
-    }
-
-    .email-box {
-        text-align: center;
-        margin-top: 30px;
-        padding: 25px;
-        background: #111827;
-        border-radius: 12px;
-        border: 1px solid #1f2937;
-    }
-
-    .email-box a {
+        border-left: 4px solid #22c55e;
+        border-radius: 8px;
         color: #22c55e;
-        font-weight: bold;
-        text-decoration: none;
-    }
-
-    footer {
-        text-align: center;
-        padding: 40px;
-        color: #64748b;
-        border-top: 1px solid #1f2937;
-        margin-top: 40px;
     }
 </style>
 </head>
@@ -130,85 +77,70 @@
 <body>
 
 <header>
-    <h1>Request Your Software Project Consultation</h1>
-    <p>
-        Every serious project starts with clarity.
-        Tell us what you want to build and we will evaluate the best development approach.
-    </p>
+    <h1>Project Consultation</h1>
+    <p>Tell us about your software idea and we will respond with a development plan.</p>
 </header>
 
 <div class="container">
 
-    <!-- PROCESS -->
     <div class="card">
-        <h2>How It Works</h2>
-        <div class="info">
-            1. You submit your project idea<br>
-            2. We analyze scope and complexity<br>
-            3. We respond with a clear development plan<br>
-            4. You proceed to development if approved
-        </div>
-    </div>
 
-    <!-- FORM -->
-    <div class="card">
-        <h2>Project Request Form</h2>
+        <!-- FORM -->
+        <form id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
 
-        <form action="mailto:valueinvestingsoftware@gmail.com" method="post" enctype="text/plain" autocomplete="on">
+            <label>Name</label>
+            <input type="text" name="name" required>
 
-            <label>Your Name</label>
-            <input type="text" name="name" required autocomplete="name">
-
-            <label>Your Email</label>
-            <input type="email" name="email" required autocomplete="name">
+            <label>Email</label>
+            <input type="email" name="email" required>
 
             <label>Project Type</label>
-            <select name="project_type" required>
+            <select name="project_type">
                 <option>Web Application</option>
                 <option>Mobile App</option>
-                <option>Business System / ERP</option>
+                <option>Business System</option>
                 <option>API / Integration</option>
                 <option>Automation Tool</option>
-                <option>Custom Software</option>
             </select>
 
-            <label>Project Description</label>
-            <textarea name="description" placeholder="Describe your idea, problem, or system..." required></textarea>
+            <label>Message</label>
+            <textarea name="message" required></textarea>
 
-            <label>Current Status (optional)</label>
-            <input type="text" name="status" placeholder="e.g. idea, prototype, existing system">
-
-            <button type="submit" class="btn">
-                Submit Consultation Request
-            </button>
+            <button type="submit">Send Request</button>
         </form>
-    </div>
 
-    <!-- VALUE INFO -->
-    <div class="card">
-        <h2>What Happens Next?</h2>
-        <div class="info">
-            ✔ We review your request manually<br>
-            ✔ We define technical feasibility<br>
-            ✔ We estimate development effort<br>
-            ✔ We respond via email with next steps
+        <!-- SUCCESS MESSAGE -->
+        <div class="success" id="successMessage">
+            ✔ Your message has been sent successfully. We will contact you soon.
         </div>
-    </div>
 
-    <!-- EMAIL -->
-    <div class="email-box">
-        <h2>Direct Contact</h2>
-        <p>If you prefer direct communication:</p>
-        <a href="mailto:valueinvestingsoftware@gmail.com">
-            valueinvestingsoftware@gmail.com
-        </a>
     </div>
 
 </div>
 
-<footer>
-    Value Investing Software Development — Turning ideas into structured systems.
-</footer>
+<script>
+    const form = document.getElementById("contactForm");
+    const success = document.getElementById("successMessage");
+
+    form.addEventListener("submit", async function(e) {
+        e.preventDefault();
+
+        const data = new FormData(form);
+
+        const response = await fetch(form.action, {
+            method: "POST",
+            body: data,
+            headers: { 'Accept': 'application/json' }
+        });
+
+        if (response.ok) {
+            form.reset();
+            success.style.display = "block";
+        } else {
+            alert("Something went wrong. Please try again.");
+        }
+    });
+</script>
 
 </body>
 </html>
