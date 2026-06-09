@@ -2,394 +2,327 @@
 <html lang="en">
 <head>
 
-      <!-- Google Tag Manager -->
+         <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-NJ43JP9F');</script>
 <!-- End Google Tag Manager -->
-    
+      
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Pricing & Custom Development</title>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<title>Start Your Software Development Project</title>
 
 <style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: #0b1220;
+        color: #e5e7eb;
+        line-height: 1.6;
+    }
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
+    header {
+        padding: 80px 20px;
+        text-align: center;
+        background: linear-gradient(135deg, #0f172a, #111827);
+    }
 
-body{
-    font-family:'Inter',sans-serif;
-    background:#f5f7fb;
-    color:#1f2937;
-}
+    header h1 {
+        font-size: 42px;
+        margin-bottom: 10px;
+    }
 
-.container{
-    width:90%;
-    max-width:1300px;
-    margin:auto;
-}
+    header p {
+        color: #94a3b8;
+        max-width: 750px;
+        margin: auto;
+        font-size: 18px;
+    }
 
-.hero{
-    text-align:center;
-    padding:60px 20px;
-}
+    .container {
+        width: 90%;
+        max-width: 1100px;
+        margin: auto;
+        padding: 60px 0;
+    }
 
-.hero h1{
-    font-size:3rem;
-    margin-bottom:15px;
-}
+    h2 {
+        color: #60a5fa;
+        margin-bottom: 20px;
+    }
 
-.hero p{
-    font-size:1.1rem;
-    color:#6b7280;
-    max-width:850px;
-    margin:auto;
-}
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 20px;
+    }
 
-.pricing{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-    gap:30px;
-    margin-bottom:60px;
-}
+    .card {
+        background: #111827;
+        border: 1px solid #1f2937;
+        padding: 25px;
+        border-radius: 12px;
+        transition: 0.3s;
+    }
 
-.card{
-    background:white;
-    border-radius:20px;
-    padding:35px;
-    box-shadow:0 10px 35px rgba(0,0,0,0.08);
-    transition:0.3s;
-}
+    .card:hover {
+        transform: translateY(-5px);
+        border-color: #22c55e;
+    }
 
-.card:hover{
-    transform:translateY(-5px);
-}
+    .title {
+        font-size: 20px;
+        font-weight: bold;
+        margin-bottom: 10px;
+        color: #facc15;
+    }
 
-.featured{
-    border:3px solid #2563eb;
-    position:relative;
-}
+    .subtitle {
+        color: #94a3b8;
+        font-size: 14px;
+        margin-bottom: 15px;
+    }
 
-.badge{
-    position:absolute;
-    top:-15px;
-    right:20px;
-    background:#2563eb;
-    color:white;
-    padding:8px 16px;
-    border-radius:30px;
-    font-size:0.85rem;
-    font-weight:700;
-}
+    .btn {
+        display: inline-block;
+        width: 100%;
+        text-align: center;
+        padding: 12px;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: bold;
+        margin-top: 10px;
+    }
 
-.plan-name{
-    font-size:1.7rem;
-    font-weight:700;
-    margin-bottom:10px;
-}
+    .btn-primary {
+        background: #2563eb;
+        color: white;
+    }
 
-.price{
-    font-size:3rem;
-    font-weight:800;
-    margin-bottom:15px;
-}
+    .btn-primary:hover {
+        background: #1d4ed8;
+    }
 
-.description{
-    color:#6b7280;
-    margin-bottom:25px;
-}
+    .btn-secondary {
+        background: #16a34a;
+        color: white;
+    }
 
-.features{
-    list-style:none;
-    margin-bottom:30px;
-}
+    .btn-secondary:hover {
+        background: #15803d;
+    }
 
-.features li{
-    margin-bottom:12px;
-    padding-left:22px;
-    position:relative;
-}
+    .btn-dark {
+        background: #374151;
+        color: white;
+    }
 
-.features li::before{
-    content:"✓";
-    color:#16a34a;
-    font-weight:bold;
-    position:absolute;
-    left:0;
-}
+    .section {
+        margin-bottom: 60px;
+    }
 
-.btn{
-    display:block;
-    width:100%;
-    text-align:center;
-    text-decoration:none;
-    padding:14px;
-    border-radius:10px;
-    font-weight:700;
-}
+    .highlight {
+        color: #22c55e;
+        font-weight: bold;
+    }
 
-.btn-primary{
-    background:#2563eb;
-    color:white;
-}
+    .info-box {
+        background: #0f172a;
+        border: 1px solid #1f2937;
+        padding: 25px;
+        border-radius: 12px;
+        margin-bottom: 30px;
+    }
 
-.btn-secondary{
-    background:#111827;
-    color:white;
-}
+    .steps {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 15px;
+    }
 
-.btn-free{
-    background:#16a34a;
-    color:white;
-}
+    .step {
+        background: #111827;
+        padding: 20px;
+        border-radius: 10px;
+        border-left: 3px solid #22c55e;
+    }
 
-.footer-actions{
-    display:flex;
-    justify-content:center;
-    gap:20px;
-    margin:50px 0;
-    flex-wrap:wrap;
-}
+    footer {
+        text-align: center;
+        padding: 40px;
+        color: #64748b;
+        border-top: 1px solid #1f2937;
+    }
 
-.back-btn{
-    background:#374151;
-    color:white;
-    text-decoration:none;
-    padding:15px 30px;
-    border-radius:10px;
-    font-weight:700;
-}
+    .back {
+        display: inline-block;
+        margin-top: 20px;
+        color: #94a3b8;
+        text-decoration: none;
+    }
 
-.paypal-btn{
-    background:#0070ba;
-    color:white;
-    text-decoration:none;
-    padding:15px 30px;
-    border-radius:10px;
-    font-weight:700;
-}
-
-.section{
-    background:white;
-    padding:40px;
-    border-radius:20px;
-    margin-bottom:40px;
-    box-shadow:0 10px 30px rgba(0,0,0,.05);
-}
-
-.section h2{
-    margin-bottom:20px;
-}
-
-.faq-item{
-    margin-bottom:20px;
-}
-
-.faq-item h3{
-    margin-bottom:8px;
-}
-
-.notice{
-    text-align:center;
-    color:#6b7280;
-    margin-bottom:40px;
-}
-
+    .back:hover {
+        color: white;
+    }
 </style>
 </head>
+
 <body>
+
+<header>
+    <h1>Start Your Software Development Project</h1>
+    <p>
+        Direct development services focused on real business value.
+        No platforms. No noise. Just clear, efficient software creation.
+    </p>
+</header>
 
 <div class="container">
 
-    <div class="hero">
-        <h1>Simple Pricing</h1>
-
-        <p>
-            Full-featured software available for free.
-            Purchase custom development only if you need
-            specific features tailored to your workflow.
-        </p>
-    </div>
-
-    <div class="pricing">
-
-        <!-- Community -->
-
-        <div class="card">
-
-            <div class="plan-name">
-                Community Edition
-            </div>
-
-            <div class="price">
-                Free
-            </div>
-
-            <p class="description">
-                Perfect for students, investors, entrepreneurs
-                and small businesses.
-            </p>
-
-            <ul class="features">
-                <li>Full software functionality</li>
-                <li>Desktop application</li>
-                <li>Mobile application</li>
-                <li>Synchronization API</li>
-                <li>Free updates</li>
-                <li>Bug fixes included</li>
-                <li>Free Udemy course</li>
-                <li>Feature suggestions welcome</li>
-                <li>Participate in product evolution</li>
-            </ul>
-
-            <a href="index.html" class="btn btn-free">
-                Download Free
-            </a>
-
-        </div>
-
-        <!-- Starter -->
-
-        <div class="card featured">
-
-            <div class="badge">
-                MOST POPULAR
-            </div>
-
-            <div class="plan-name">
-                Custom Starter Package
-            </div>
-
-            <div class="price">
-                $39
-            </div>
-
-            <p class="description">
-                Small customization package for users needing
-                specific adjustments.
-            </p>
-
-            <ul class="features">
-                <li>Everything in Community Edition</li>
-                <li>Custom feature requests</li>
-                <li>Business rule adjustments</li>
-                <li>Additional fields</li>
-                <li>Workflow improvements</li>
-                <li>Up to 3 hours of development included</li>
-            </ul>
-
-            <a
-                href="https://www.paypal.me/ValueInvestingSoft"
-                target="_blank"
-                class="btn btn-primary">
-                Purchase Now
-            </a>
-
-        </div>
-
-        <!-- Development -->
-
-        <div class="card">
-
-            <div class="plan-name">
-                Custom Development
-            </div>
-
-            <div class="price">
-                $7.99/hr
-            </div>
-
-            <p class="description">
-                For advanced requirements and ongoing
-                custom development.
-            </p>
-
-            <ul class="features">
-                <li>Everything in Community Edition</li>
-                <li>Advanced customizations</li>
-                <li>Dedicated development time</li>
-                <li>Priority implementation</li>
-                <li>Custom workflows</li>
-                <li>Feature development on demand</li>
-            </ul>
-
-            <a
-                href="https://www.paypal.me/ValueInvestingSoft"
-                target="_blank"
-                class="btn btn-secondary">
-                Request Development
-            </a>
-
-        </div>
-
-    </div>
-
+    <!-- VALUE EXPLANATION -->
     <div class="section">
+        <h2>How It Works</h2>
 
+        <div class="steps">
+            <div class="step">
+                <strong>1. Define Your Idea</strong><br>
+                You describe your system or improvement.
+            </div>
+
+            <div class="step">
+                <strong>2. Development Scope</strong><br>
+                We break it into clear development tasks.
+            </div>
+
+            <div class="step">
+                <strong>3. Build & Iterate</strong><br>
+                Development is done in focused working blocks.
+            </div>
+
+            <div class="step">
+                <strong>4. Delivery</strong><br>
+                You receive a working software system.
+            </div>
+        </div>
+    </div>
+
+    <!-- PRICING OPTIONS -->
+    <div class="section">
+        <h2>Development Options</h2>
+
+        <div class="grid">
+
+            <!-- Consultation -->
+            <div class="card">
+                <div class="title">Project Consultation</div>
+                <div class="subtitle">
+                    Ideal if you want to define your idea before development starts.
+                </div>
+                <p>
+                    We analyze your idea, structure requirements, and define a clear roadmap.
+                </p>
+
+                <a href="https://www.paypal.me/ValueInvestingSoft"
+                   class="btn btn-dark" target="_blank">
+                    Start Consultation
+                </a>
+            </div>
+
+            <!-- Hourly Dev -->
+            <div class="card">
+                <div class="title">Hourly Development</div>
+                <div class="subtitle">
+                    Main model — flexible development based on actual work time.
+                </div>
+
+                <p>
+                    Perfect for features, improvements, integrations, or ongoing development.
+                </p>
+
+                <p class="highlight">
+                    Pay per development hour — optimized for efficiency and value.
+                </p>
+
+                <a href="https://www.paypal.me/ValueInvestingSoft"
+                   class="btn btn-primary" target="_blank">
+                    Start Development
+                </a>
+            </div>
+
+            <!-- Full Project -->
+            <div class="card">
+                <div class="title">Full Custom Project</div>
+                <div class="subtitle">
+                    For complete systems or business software solutions.
+                </div>
+
+                <p>
+                    End-to-end development for complex applications or business platforms.
+                </p>
+
+                <p class="highlight">
+                    Structured delivery with milestones and iterative progress.
+                </p>
+
+                <a href="https://www.paypal.me/ValueInvestingSoft"
+                   class="btn btn-secondary" target="_blank">
+                    Request Full Project
+                </a>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- TRUST SECTION -->
+    <div class="section">
+        <h2>Why Work With This Model?</h2>
+
+        <div class="info-box">
+            ✔ Direct developer communication<br>
+            ✔ No marketplace intermediaries<br>
+            ✔ Focus on real working software<br>
+            ✔ Flexible scope and iteration<br>
+            ✔ Built around actual business needs
+        </div>
+    </div>
+
+    <!-- FAQ -->
+    <div class="section">
         <h2>Frequently Asked Questions</h2>
 
-        <div class="faq-item">
-            <h3>Is the software really free?</h3>
-            <p>
-                Yes. All core features are available at no cost.
-            </p>
+        <div class="info-box">
+            <strong>Do you use freelance platforms?</strong><br>
+            No. Work is done directly to ensure clarity and efficiency.
         </div>
 
-        <div class="faq-item">
-            <h3>Do I need a subscription?</h3>
-            <p>
-                No. There are no recurring monthly fees.
-            </p>
+        <div class="info-box">
+            <strong>What can be developed?</strong><br>
+            Web apps, business systems, APIs, automation tools, and integrations.
         </div>
 
-        <div class="faq-item">
-            <h3>What happens if my request requires more time?</h3>
-            <p>
-                Additional development can be purchased using
-                the hourly development package.
-            </p>
+        <div class="info-box">
+            <strong>How is pricing determined?</strong><br>
+            Based on development time and complexity of the system.
         </div>
 
-        <div class="faq-item">
-            <h3>Can I request a completely new feature?</h3>
-            <p>
-                Yes. Custom development requests are evaluated
-                individually.
-            </p>
+        <div class="info-box">
+            <strong>Do you support ongoing improvements?</strong><br>
+            Yes, through hourly development engagement.
         </div>
-
     </div>
 
-    <p class="notice">
-        Custom development services are provided based on project
-        scope and technical feasibility.
-    </p>
-
-    <div class="footer-actions">
-
-        <a href="index.html" class="back-btn">
-            ← Back to Home
-        </a>
-
-        <a
-            href="https://www.paypal.me/ValueInvestingSoft"
-            target="_blank"
-            class="paypal-btn">
-            Pay with PayPal
-        </a>
-
+    <!-- BACK -->
+    <div class="section" style="text-align:center;">
+        <a class="back" href="index.html">← Back to main page</a>
     </div>
 
 </div>
+
+<footer>
+    Value Investing Software Development — Focused on building real systems with measurable value.
+</footer>
 
 </body>
 </html>
