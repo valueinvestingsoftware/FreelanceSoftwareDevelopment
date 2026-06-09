@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contact - Project Consultation</title>
+<title>Contact - Software Development</title>
 
 <style>
     body {
@@ -11,65 +11,92 @@
         font-family: Arial, sans-serif;
         background: #0b1220;
         color: #e5e7eb;
+        line-height: 1.6;
     }
 
     header {
-        padding: 60px 20px;
+        padding: 70px 20px;
         text-align: center;
-        background: #111827;
+        background: linear-gradient(135deg, #0f172a, #111827);
     }
 
     header h1 {
-        font-size: 38px;
+        font-size: 40px;
+        margin-bottom: 10px;
+    }
+
+    header p {
+        max-width: 750px;
+        margin: auto;
+        color: #94a3b8;
+        font-size: 18px;
     }
 
     .container {
         max-width: 900px;
         margin: auto;
-        padding: 40px 20px;
+        padding: 50px 20px;
     }
 
     .card {
         background: #111827;
-        padding: 25px;
+        border: 1px solid #1f2937;
         border-radius: 12px;
-        border: 1px solid #1f2937;
+        padding: 25px;
+        margin-bottom: 20px;
     }
 
-    input, select, textarea {
-        width: 100%;
-        padding: 12px;
-        margin-top: 10px;
+    h2 {
+        color: #60a5fa;
         margin-bottom: 15px;
-        border-radius: 8px;
+    }
+
+    .email-box {
+        text-align: center;
+        padding: 30px;
+        background: #0f172a;
         border: 1px solid #1f2937;
-        background: #0f172a;
-        color: white;
+        border-radius: 12px;
+        margin-bottom: 30px;
     }
 
-    button {
-        width: 100%;
-        padding: 14px;
-        background: #22c55e;
-        border: none;
-        border-radius: 8px;
-        font-weight: bold;
-        color: white;
-        cursor: pointer;
-    }
-
-    button:hover {
-        background: #16a34a;
-    }
-
-    .success {
-        display: none;
-        margin-top: 20px;
-        padding: 15px;
-        background: #0f172a;
-        border-left: 4px solid #22c55e;
-        border-radius: 8px;
+    .email {
+        font-size: 20px;
         color: #22c55e;
+        font-weight: bold;
+        text-decoration: none;
+        display: inline-block;
+        margin-top: 10px;
+    }
+
+    .steps {
+        background: #111827;
+        padding: 20px;
+        border-radius: 12px;
+        border-left: 3px solid #22c55e;
+    }
+
+    ul {
+        margin: 0;
+        padding-left: 20px;
+    }
+
+    li {
+        margin-bottom: 8px;
+        color: #cbd5e1;
+    }
+
+    .hint {
+        color: #94a3b8;
+        font-size: 14px;
+        margin-top: 10px;
+    }
+
+    footer {
+        text-align: center;
+        padding: 40px;
+        color: #64748b;
+        border-top: 1px solid #1f2937;
     }
 </style>
 </head>
@@ -77,70 +104,73 @@
 <body>
 
 <header>
-    <h1>Project Consultation</h1>
-    <p>Tell us about your software idea and we will respond with a development plan.</p>
+    <h1>Start Your Software Project</h1>
+    <p>
+        Direct consultation via email. No platforms, no forms, no intermediaries.
+        Just clear communication for serious software development.
+    </p>
 </header>
 
 <div class="container">
 
-    <div class="card">
+    <!-- EMAIL -->
+    <div class="email-box">
+        <h2>Direct Contact Email</h2>
+        <p>Send your project inquiry directly:</p>
 
-        <!-- FORM -->
-        <form id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <a class="email" href="mailto:valueinvestingsoftware@gmail.com">
+            valueinvestingsoftware@gmail.com
+        </a>
 
-            <label>Name</label>
-            <input type="text" name="name" required>
-
-            <label>Email</label>
-            <input type="email" name="email" required>
-
-            <label>Project Type</label>
-            <select name="project_type">
-                <option>Web Application</option>
-                <option>Mobile App</option>
-                <option>Business System</option>
-                <option>API / Integration</option>
-                <option>Automation Tool</option>
-            </select>
-
-            <label>Message</label>
-            <textarea name="message" required></textarea>
-
-            <button type="submit">Send Request</button>
-        </form>
-
-        <!-- SUCCESS MESSAGE -->
-        <div class="success" id="successMessage">
-            ✔ Your message has been sent successfully. We will contact you soon.
+        <div class="hint">
+            Click to open your email client
         </div>
+    </div>
 
+    <!-- GUIDANCE -->
+    <div class="card">
+        <h2>What to Include in Your Email</h2>
+
+        <div class="steps">
+            <ul>
+                <li>Describe your software idea or problem</li>
+                <li>Specify if it is web, mobile, or business system</li>
+                <li>Explain current status (idea, prototype, existing system)</li>
+                <li>List any required features or integrations</li>
+                <li>Mention urgency or timeline if applicable</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- PROCESS -->
+    <div class="card">
+        <h2>How We Work</h2>
+
+        <div class="steps">
+            1. You send your project details via email<br>
+            2. We analyze scope and feasibility<br>
+            3. We respond with a development plan<br>
+            4. We proceed with hourly or project-based development
+        </div>
+    </div>
+
+    <!-- TRUST -->
+    <div class="card">
+        <h2>Why Email-First?</h2>
+
+        <ul>
+            <li>✔ Direct communication with the developer</li>
+            <li>✔ No third-party platforms or fees</li>
+            <li>✔ Clear understanding before any commitment</li>
+            <li>✔ Suitable for custom software projects</li>
+        </ul>
     </div>
 
 </div>
 
-<script>
-    const form = document.getElementById("contactForm");
-    const success = document.getElementById("successMessage");
-
-    form.addEventListener("submit", async function(e) {
-        e.preventDefault();
-
-        const data = new FormData(form);
-
-        const response = await fetch(form.action, {
-            method: "POST",
-            body: data,
-            headers: { 'Accept': 'application/json' }
-        });
-
-        if (response.ok) {
-            form.reset();
-            success.style.display = "block";
-        } else {
-            alert("Something went wrong. Please try again.");
-        }
-    });
-</script>
+<footer>
+    Value Investing Software Development — Direct communication for real software solutions.
+</footer>
 
 </body>
 </html>
